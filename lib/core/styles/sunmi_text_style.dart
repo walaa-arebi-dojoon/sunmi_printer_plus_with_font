@@ -39,6 +39,7 @@ class SunmiTextStyle {
   ///
   /// Default value is [SunmiPrintAlign.LEFT].
   final SunmiPrintAlign? align;
+  final SunmiTextStyleFontFamily? fontFamily;
 
   /// Indicates whether the text should be bold.
   ///
@@ -90,6 +91,7 @@ class SunmiTextStyle {
     required this.strikethrough,
     required this.italic,
     required this.reverse,
+      required this.fontFamily
   });
 
   /// Factory constructor to create a [SunmiTextStyle] object with optional customizations.
@@ -113,6 +115,7 @@ class SunmiTextStyle {
     bool strikethrough = false,
     bool italic = false,
     bool reverse = false,
+      SunmiTextStyleFontFamily fontFamily = SunmiTextStyleFontFamily.DEFAULT
   }) {
     // Validate fontSize to ensure it's within the range of 1 to 96.
     if (fontSize < 1 || fontSize > 96) {
@@ -130,6 +133,7 @@ class SunmiTextStyle {
       reverse: reverse,
       strikethrough: strikethrough,
       underline: underline,
+      fontFamily: fontFamily,
     );
   }
 
@@ -152,6 +156,7 @@ class SunmiTextStyle {
       'strikethrough': strikethrough, // Whether the text has a strikethrough.
       'italic': italic, // Whether the text is italicized.
       'reverse': reverse, // Whether the text is in reverse mode.
+      'fontFamily': fontFamily?.name
     };
   }
 }

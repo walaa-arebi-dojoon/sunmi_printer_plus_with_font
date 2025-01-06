@@ -124,6 +124,21 @@ enum SunmiPrintAlign {
   RIGHT,
 }
 
+enum SunmiTextStyleFontFamily {
+  /// give somar font family to your text.
+  SOMAR,
+
+  /// give Khediawy font family to your text.
+  RAKKAS,
+
+  /// give Playwrite font family to your text.
+  PLAYWRITE,
+
+  DEFAULT
+
+  ///add more fonts here
+}
+
 /// Enum to define line styles for Sunmi printers.
 enum SunmiPrintLine {
   /// Solid line style.

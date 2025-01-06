@@ -31,6 +31,7 @@ class SunmiPrinterClass(private  val printer: Printer?) {
                 enableStrikethrough(printerArgument["strikethrough"] as? Boolean ?: false)
                 enableItalics(printerArgument["italic"] as? Boolean ?: false)
                 enableAntiColor(printerArgument["reverse"] as? Boolean ?: false)
+                setFont(getFontFamily(printerArgument["fontFamily"] as? String))
             }
             val text = printerArgument["text"] as? String
                 ?: return "No text provided to print"
@@ -40,6 +41,15 @@ class SunmiPrinterClass(private  val printer: Printer?) {
         } catch (e: SdkException) {
             Log.e("sunmi_printer_plus", "Error while printing: ${e.message}", e)
             "error"
+        }
+    }
+
+    private fun getFontFamily(fontFamily: String?): String {
+        return when (fontFamily) {
+            "SOMAR" -> "somar.ttf"
+            "PLAYWRITE" -> "Playwrite.ttf"
+            "RAKKAS" -> "Rakkas-Regular.ttf"
+            else -> ""
         }
     }
 
@@ -176,6 +186,7 @@ class SunmiPrinterClass(private  val printer: Printer?) {
                 enableStrikethrough(printerArgument["strikethrough"] as? Boolean ?: false)
                 enableItalics(printerArgument["italic"] as? Boolean ?: false)
                 enableAntiColor(printerArgument["reverse"] as? Boolean ?: false)
+                setFont(getFontFamily(printerArgument["fontFamily"] as? String))
             }
         } catch (e: Exception) {
            return TextStyle.getStyle();

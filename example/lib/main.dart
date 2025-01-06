@@ -164,14 +164,78 @@ class _MyAppState extends State<MyApp> {
                         onPressed: () async {
                           await printerController.printCustomText(
                             sunmiText: SunmiText(
-                              text: 'I love flutter',
+                              text: 'I love flutter ',
                               style: SunmiTextStyle(
                                 align: SunmiPrintAlign.LEFT,
                               ),
                             ),
                           );
                         },
-                        child: const Text("Aligned Left"),
+                        child: const Text("Aligned Left "),
+                      ),
+                      OutlinedButton(
+                        onPressed: () async {
+                          await printerController.printCustomText(
+                            sunmiText: SunmiText(
+                              text: 'مرحبا ',
+                              style: SunmiTextStyle(
+                                align: SunmiPrintAlign.CENTER,
+                              ),
+                            ),
+                          );
+                          await printerController.printCustomText(
+                            sunmiText: SunmiText(
+                              text: 'مرحبا ',
+                              style: SunmiTextStyle(
+                                  align: SunmiPrintAlign.CENTER,
+                                  fontFamily: SunmiTextStyleFontFamily.SOMAR),
+                            ),
+                          );
+                          await printerController.printCustomText(
+                            sunmiText: SunmiText(
+                              text: 'مرحبا',
+                              style: SunmiTextStyle(
+                                  align: SunmiPrintAlign.CENTER,
+                                  fontFamily: SunmiTextStyleFontFamily.RAKKAS),
+                            ),
+                          );
+                        },
+                        child: const Text("arabic font family changes"),
+                      ),
+                      OutlinedButton(
+                        onPressed: () async {
+                          await printerController.printCustomText(
+                            sunmiText: SunmiText(
+                              text: 'I love flutter ',
+                              style: SunmiTextStyle(
+                                align: SunmiPrintAlign.LEFT,
+                              ),
+                            ),
+                          );
+                        },
+                        child: const Text("Aligned Left "),
+                      ),
+                      OutlinedButton(
+                        onPressed: () async {
+                          await printerController.printCustomText(
+                            sunmiText: SunmiText(
+                              text: 'hello ',
+                              style: SunmiTextStyle(
+                                align: SunmiPrintAlign.CENTER,
+                              ),
+                            ),
+                          );
+                          await printerController.printCustomText(
+                            sunmiText: SunmiText(
+                              text: 'hello ',
+                              style: SunmiTextStyle(
+                                  align: SunmiPrintAlign.CENTER,
+                                  fontFamily:
+                                      SunmiTextStyleFontFamily.PLAYWRITE),
+                            ),
+                          );
+                        },
+                        child: const Text("English font family changes"),
                       ),
                       OutlinedButton(
                         onPressed: () async {
@@ -258,12 +322,38 @@ class _MyAppState extends State<MyApp> {
                         onPressed: () async {
                           await printerController.addText(sunmiTexts: [
                             SunmiText(
+                              text: 'مرحبا ',
+                              style: SunmiTextStyle(
+                                  align: SunmiPrintAlign.CENTER,
+                                  fontFamily: SunmiTextStyleFontFamily.SOMAR),
+                            ),
+                            SunmiText(
+                              text: 'مرحبا ',
+                              style: SunmiTextStyle(
+                                  align: SunmiPrintAlign.CENTER,
+                                  fontFamily: SunmiTextStyleFontFamily.RAKKAS),
+                            ),
+                            SunmiText(
+                              text: 'مرحبا ',
+                            ),
+                          ]);
+                        },
+                        child: const Text(
+                            "Arabi Multiple formats with font family changes"),
+                      ),
+                      OutlinedButton(
+                        onPressed: () async {
+                          await printerController.addText(sunmiTexts: [
+                            SunmiText(
                               text: 'I ',
                             ),
                             SunmiText(
                                 text: 'love ',
                                 style: SunmiTextStyle(
-                                    bold: true, align: SunmiPrintAlign.CENTER)),
+                                    fontFamily:
+                                        SunmiTextStyleFontFamily.PLAYWRITE,
+                                    bold: true,
+                                    align: SunmiPrintAlign.CENTER)),
                             SunmiText(
                                 text: 'React ',
                                 style: SunmiTextStyle(strikethrough: true)),
