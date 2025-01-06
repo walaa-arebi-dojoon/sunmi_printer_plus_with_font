@@ -227,11 +227,20 @@ class _MyAppState extends State<MyApp> {
                           );
                           await printerController.printCustomText(
                             sunmiText: SunmiText(
-                              text: 'hello ',
+                              text: 'Everyone ',
                               style: SunmiTextStyle(
                                   align: SunmiPrintAlign.CENTER,
                                   fontFamily:
                                       SunmiTextStyleFontFamily.PLAYWRITE),
+                            ),
+                          );
+                          await printerController.printCustomText(
+                            sunmiText: SunmiText(
+                              text: 'Everyone ',
+                              style: SunmiTextStyle(
+                                  align: SunmiPrintAlign.CENTER,
+                                  fontFamily:
+                                      SunmiTextStyleFontFamily.DANCING_SCRIPT),
                             ),
                           );
                         },

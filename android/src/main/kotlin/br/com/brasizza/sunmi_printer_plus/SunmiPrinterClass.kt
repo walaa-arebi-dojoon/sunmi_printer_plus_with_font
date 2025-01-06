@@ -49,6 +49,8 @@ class SunmiPrinterClass(private  val printer: Printer?) {
             "SOMAR" -> "somar.ttf"
             "PLAYWRITE" -> "Playwrite.ttf"
             "RAKKAS" -> "Rakkas-Regular.ttf"
+            "DANCING_SCRIPT" -> "DancingScript.ttf"
+            
             else -> ""
         }
     }

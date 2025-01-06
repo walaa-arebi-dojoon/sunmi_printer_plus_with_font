@@ -134,6 +134,9 @@ enum SunmiTextStyleFontFamily {
   /// give Playwrite font family to your text.
   PLAYWRITE,
 
+  /// give DancingScript font family to your text.
+  DANCING_SCRIPT,
+
   DEFAULT
 
   ///add more fonts here
